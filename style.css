@@ -1,54 +1,48 @@
 *{
     padding: 0;
-    margin:0;
-    box-sizing: border-box;
+    margin: 0;
 }
 body{
-    background: url(img/background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
+    background: linear-gradient(rgb(109, 7, 122),rgb(31, 1, 28));
+    height:100vh;
 }
 header{
-    position: relative;
+    position: fixed;
+    top:-20px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     z-index: 100;
 }
 header h1{
-    position: relative;
-    top:40px;
-    left:90px;
+    transform: translate(100px,40px);
+    color: white;
+    font-size: 2.5em;
     font-weight: bold;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 2.5em;
-    color: white;
 }
-header ul {
-    list-style: none;
+header ul{
     display: flex;
-    margin: 50px 50px 0 0;
+    margin-top: 50px;
+    margin-right: 80px;
+    list-style: none;
 }
 header ul li{
-    position: relative;
-    margin: 0px 30px;
+   margin: 0px 40px;
 }
 header ul li a{
     text-decoration: none;
     color: white;
-    letter-spacing: 1px;
-    transition: 0.6s;
+    transition: 0.8s;
 }
 header ul li a:hover,.home{
-    background: rgb(23, 109, 109);
-    padding:9px 17px;
-    border-radius: 20px;
-    letter-spacing: 1.5px;
-    color:black;
     text-decoration: underline;
-    box-shadow: 0 0 12px rgb(23, 109, 109),
-                0 0 20px rgb(23, 109, 109);
+    color: black;
+    background: rgb(172, 157, 168);
+    padding: 10px 20px;
+    border-radius:30px;
+    box-shadow: 0 0 12px rgb(172, 157, 168),
+                0 0 12px rgb(172, 157, 168);
 }
 section{
     position: relative;
@@ -65,48 +59,61 @@ section img{
     height: 100vh;
     object-fit: cover;
 }
-#gate-left{
-    transform: translateX(-250px);
+#moon{
+    mix-blend-mode: screen;
     z-index: -2;
+    transition: 0.5s;
 }
-#gate-right{
-    transform: translateX(300px);
-    z-index: -2;
-}
-#tree-left,
-#tree-right{
+#star{
     position: absolute;
-    top:-10px;
+    top:-100px;
+    z-index: -3;
+    transition: 0.5s;
 }
-.name{
+.moon-light{
     position: relative;
-    top:-40px;
-    left:-10px;
-    font-size: 3.5em;
+    transform: translateY(110px) translateX(400px);
+    color: white;
+    font-size: 3em;
+    font-family:algerian;
+    letter-spacing: 3px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+#mountain-behind{
+    z-index: -1;
+    transition: 0.5s;
+}
+#mountain-front{
+    z-index: 5;
+}
+#button{
+   position: absolute;
+   transform: translate(10px,500px);
+   padding: 12px 30px;
+   border-radius: 20px;
+   border-color: white;
+   text-transform:initial;
+   font-weight: bold;
+   transition: 0.8s;
+   z-index: 3;
+    box-shadow: 0 0 12px white,
+               0 0 22px white,
+               0 0 50px white;
     letter-spacing: 2px;
-    font-family: algerian;
-    text-transform:uppercase;
-    color: rgb(53, 97, 114);
-    text-shadow: 0 0 12px rgb(162, 255, 247),
-                 0 0 12px rgb(162, 255, 239);
-    z-index: -4;
+}
+#grass{
+    z-index: 100;
+    pointer-events: none;
 }
 div{
-    background: rgb(1, 10, 15);
-    
+    background: #000a0f;
 }
-
-div h2{
+div h1{
     color: white;
-    font-size: 1.7em;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 0.9px;
-    z-index: 5;
+    letter-spacing: 2px;
 }
 div p{
     color: gray;
-    font-size: 1.1em;
     letter-spacing: 1px;
 }
-
-
